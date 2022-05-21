@@ -18,6 +18,7 @@ Route::get('/', 'SiteController@login');
 Route::post('doLogin','SiteController@doLogin');
 Route::get('register','SiteController@register');
 Route::post('doRegister','SiteController@doRegister');
+Route::get('logout','SiteController@doLogout');
 
 Route::prefix('admin')->middleware('CekRole:Admin')->group(function(){
     Route::get('/','Admin\SiteController@index');

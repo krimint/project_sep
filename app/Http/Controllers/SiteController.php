@@ -58,6 +58,6 @@ class SiteController extends Controller
     {
         # code...
         Auth::logout();
-        return redirect()->route('login');
+        return redirect('/');
     }
 }

@@ -1,1 +1,1 @@
-owner
+@extends('layouts.app')
