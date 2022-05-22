@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +15,9 @@ use App\Http\Controllers\SiteController;
 
 Route::get('/', 'SiteController@login');
 Route::post('doLogin','SiteController@doLogin');
+Route::get('logout','SiteController@doLogout');
 Route::get('register','SiteController@register');
 Route::post('doRegister','SiteController@doRegister');
-Route::get('logout','SiteController@doLogout');
 
 Route::prefix('admin')->middleware('CekRole:Admin')->group(function(){
     Route::get('/','Admin\SiteController@index');
@@ -26,6 +25,10 @@ Route::prefix('admin')->middleware('CekRole:Admin')->group(function(){
 
 Route::prefix('owner')->middleware('CekRole:Owner')->group(function(){
     Route::get('/','Owner\SiteController@index');
+    Route::get('register','SiteController@register');
+    Route::post('doRegister','SiteController@doRegister');
+    Route::resource('obat','ObatController');
+
 });
 
 Route::prefix('user')->middleware('CekRole:User')->group(function(){

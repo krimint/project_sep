@@ -24,7 +24,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
         <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Resto</span>
+        <span class="brand-text font-weight-light">Toko Obat</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -40,13 +40,13 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column">
-                @if(Auth::user()->role == 'Admin')
-                <li class="nav-item">
+                @if(Auth::user()->role == 'Owner')
+                {{-- <li class="nav-item">
                     <a href="/dashboard" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i>
                         <p>Dashboard</p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="/report" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i>
@@ -78,29 +78,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('menu.index') }}" class="nav-link">
+                    <a href="{{ route('obat.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i>
-                        <p>Menu</p>
+                        <p>Obat</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('paket.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-clipboard-list"></i>
-                        <p>Paket</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('meja.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-clipboard-list"></i>
-                        <p>Meja</p>
-                    </a>
-                </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('posts.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i>
                         <p>Pengguna</p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item mt-5">
                     <a href="/logout" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>

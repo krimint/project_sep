@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('obat', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_jenis')->constrained('jenis')->onDelete('cascade');
+            $table->integer('id_supplier')->constrained('supplier')->onDelete('cascade');
+            $table->string('nama_obat',100)->unique();
+            $table->integer('stock');
+            $table->integer('harga_beli');
+            $table->integer('harga_jual');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
