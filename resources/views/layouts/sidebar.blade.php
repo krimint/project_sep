@@ -89,6 +89,12 @@
                         <p>Obat</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('supplier.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-clipboard-list"></i>
+                        <p>Supplier</p>
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
                     <a href="{{ route('posts.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i>

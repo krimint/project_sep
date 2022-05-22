@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama_supplier',100)->unique();
             $table->string('tempat_supplier',100);
             $table->boolean('status');
+            $table->timestamps();
         });
     }
 
