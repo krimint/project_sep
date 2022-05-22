@@ -30,9 +30,9 @@
     <div class="sidebar">
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
+            {{-- <div class="image">
             <img style="width:50px; height:50px;" src="{{ asset("storage/image/pengguna/".Auth::user()->email) }}.jpg"  class="img-circle elevation-2" alt="User Image">
-            </div>
+            </div> --}}
             <div class="info">
             <a href="#" class="d-block">{{ Auth::user()->name }}</a>
             </div>
@@ -75,6 +75,12 @@
                     <a href="/bestSelling" class="nav-link">
                         <i class="nav-icon fas fa-clipboard-list"></i>
                         <p>Menu Best Selling</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('users.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-clipboard-list"></i>
+                        <p>Pengguna</p>
                     </a>
                 </li>
                 <li class="nav-item">

@@ -14,19 +14,19 @@ class SiteController extends Controller
     {
         # code...
     }
-    public function register()
-    {
-        return view('site.register');
-    }
-    public function doRegister(Request $request)
-    {
-        # code...
-        $data = $request->all();
-        $data['password'] = Hash::make($data['password']);
-        if(User::create($data)){
-            return redirect('register');
-        }
-    }
+    // public function register()
+    // {
+    //     return view('site.register');
+    // }
+    // public function doRegister(Request $request)
+    // {
+    //     # code...
+    //     $data = $request->all();
+    //     $data['password'] = Hash::make($data['password']);
+    //     if(User::create($data)){
+    //         return redirect('register');
+    //     }
+    // }
     public function login()
     {
         return view('site.login');
